@@ -10,12 +10,13 @@ gulp.task( 'pug', function() {
 	return gulp.src( 'src/**.pug' )
 	.pipe(pug())
 	.pipe(gulp.dest( 'app/' ))
+	.pipe(sync.reload({ stream: true }))
 	} );
 
 gulp.task( 'sass', function() {
 	return gulp.src( 'src/**/**.sass' )
 	.pipe(sass())
-	.pipe(autoprefixer({
+	.pipe(autopref({
 		browsers: ['last 3 versions'],
 		cascade: false
 	}))
@@ -27,10 +28,11 @@ gulp.task( 'jsconcat', function() {
 	return gulp.src( 'src/**/**.js' )
 	.pipe(concat('scripts.js'))
 	.pipe(gulp.dest( 'app/js/' ))
+	.pipe(sync.reload({ stream: true }))
 	} );
 
-gulp.task( 'browserSync', function() {
-	browserSync({
+gulp.task( 'sync', function() {
+	sync({
 		server: {
 			baseDir: 'app'
 		},
@@ -38,7 +40,7 @@ gulp.task( 'browserSync', function() {
 		});
 	});
 
-gulp.task( 'watch', ['browserSync', 'sass', 'pug', 'jsconcat'], function() {
+gulp.task( 'watch', ['sync', 'sass', 'pug', 'jsconcat'], function() {
 	gulp.watch( 'src/**/**.**', ['pug', 'sass', 'jsconcat'] );
 });
 
