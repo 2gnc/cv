@@ -3,6 +3,6 @@
 .container {
   font-family: "Roboto", sans-serif;
   max-width: 1170px;
-  background-color: red; }
+  font-size: 16px; }
   .container__position {
     margin: 0 auto; }
