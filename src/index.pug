@@ -4,8 +4,9 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		title ФИО
 		link(rel='stylesheet' href='css/normalize.css')
+		link(rel="stylesheet", href='css/font-awesome.min.css')
 		link(rel='stylesheet' href='css/main.css')
-	body
+	body.body
 		nav.menu
 			.menu__wrapper
 				a.menu__item(href="#home") обо мне
@@ -16,15 +17,16 @@ html(lang='ru')
 				a.menu__item(href="#int") интересы
 				a.menu__item(href="#fut") планы
 				a.menu__item(href="#cont") контакты
-		.container.container__position
-			section.section#home
-				h2.section__header Фамилия Имя
-				h3.section__subheader Крутая должность
-				.section__box
-					div.section__description 
+		div.container.container__position
+			section.section.section__position#home
+				div.section__left
+					img.section__pic(src="img/section__pic--01.jpg", alt="alt")
+				div.section__main
+					h2.section__header Фамилия Имя
+					h3.section__subheader Крутая должность
+					div.section__desc
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
 						button.button скачать резюме
 						button.button связаться со мной
-					img.section__pic(src="img/section__pic--01.jpg", alt="alt")
 		script(src='js/scripts.js')
