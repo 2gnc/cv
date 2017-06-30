@@ -7,15 +7,28 @@
 		padding: 12px 0
 		text-align: right
 	&__item
-		max-width: 120px 
+		position: relative
+		display: inline-block
+		margin-right: 10px
+		padding-bottom: 5px
 		color: $textcolor
 		text-decoration: none
 		font-family: $menufont
 		font-size: 1.1em
 		font-weight: bold
 		text-transform: uppercase
-		display: inline-block
-		margin-right: 10px
-		background-color: red
-		&:hover
-			border-bottom: 2px solid $primarycolor
+		&:before
+			position: absolute
+			left: 0
+			bottom: 0
+			content: ''
+			display: block
+			width: 0
+			height: 2px
+			background-color: $primarycolor
+			transition-property: width
+			transition-duration: 0.3s
+			transition-timing-function: ease-out
+		&:hover:before
+			width: 50%
+
