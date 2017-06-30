@@ -1,27 +1,28 @@
 .section
-	//outline: 1px solid blue
+	box-sizing: border-box
+	background-color: white
+	padding: 2em
+	box-shadow: 0 0 10px rgba(0, 0, 0, .08)
+	display: flex
+	justify-content: space-between
+	&__position
+		margin: 4em 0
+	&__left
+		width: 30%
+	&__main
+		width: 70%
 	&__header
 		color: $textcolor
 		margin: 0
-		//outline: 1px solid yellow
 	&__subheader
 		color: $primarycolor
 		margin-top: 5px
 		font-weight: normal
 		text-transform: uppercase
 		font-size: 1em
-		//outline: 1px solid green
-	&__box
-		display: flex
-		justify-content: space-between
-	&__description
-		max-width: 70%
+	&__desc
 		text-align: justify
-		//outline: 1px solid red
 	&__pic
-		margin-right: 3%
-		margin-left: 3%
 		width: 200px
-		height: 200px
-		border-radius: 50%
-		box-shadow: -2px 2px 10px 0 rgba(0,0,0,0.6), 2px -2px 10px 0 rgba(0,0,0,0.6)
+		height: 300px
+		box-shadow: -1px 1px 5px 0 rgba(0,0,0,0.6), 1px -1px 5px 0 rgba(0,0,0,0.6)
