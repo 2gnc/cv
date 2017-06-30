@@ -54,3 +54,12 @@
       color: #212121; }
     .menu__item:hover:before {
       width: 50%; }
+
+.section__header {
+  color: #212121; }
+
+.section__subheader {
+  color: #ff6f00; }
+
+.section__description {
+  text-align: justify; }
