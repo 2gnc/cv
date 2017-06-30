@@ -5,8 +5,12 @@
   color: #ff6f00;
   opacity: 0.7; }
   .fa:hover {
-    color: #ff9728;
+    opacity: 1;
     cursor: pointer; }
+
+.fa-download {
+  font-size: 1.4em;
+  margin-left: 1.2em; }
 
 .body {
   font-size: 14px;
@@ -35,7 +39,7 @@
   .menu__item {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 20px;
     padding-bottom: 5px;
     color: #757575;
     text-decoration: none;
@@ -83,7 +87,7 @@
     margin: 3em 0; }
   .section__left {
     width: 21%;
-    border-right: 1px solid #ff6f00;
+    border-right: 1px solid #ffc107;
     margin-right: 2em; }
   .section__social {
     display: -webkit-box;
@@ -95,7 +99,8 @@
     margin-right: 2em;
     margin-top: 1em; }
   .section__main {
-    width: 79%; }
+    width: 79%;
+    padding: 0 2em; }
   .section__header {
     color: #212121;
     margin: 0; }
@@ -120,13 +125,13 @@
   text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
-  color: white;
   border: none;
-  background-color: #ff6f00;
+  background-color: #f5f5f5;
+  font-weight: bold;
   -webkit-box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.4);
   box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.4); }
   .button:hover {
-    background-color: #ff9728;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #ff6f00; }
   .button:focus {
     outline: none; }
