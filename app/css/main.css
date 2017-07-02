@@ -8,14 +8,6 @@
     opacity: 1;
     cursor: pointer; }
 
-.fa-download {
-  font-size: 1.4em;
-  margin-left: 1.2em; }
-
-.fa-envelope {
-  font-size: 1.4em;
-  margin-left: 1.2em; }
-
 .body {
   font-size: 14px;
   background-color: #f5f5f5; }
@@ -149,17 +141,15 @@
     color: #ff6f00; }
   .button:focus {
     outline: none; }
+  .button__icon {
+    font-size: 1.4em;
+    margin-left: 1.2em; }
 
 .contacts {
   list-style-type: none;
   width: 70%; }
   .contacts__item {
-    border: 1px solid green; }
-    .contacts__item:before {
-      content: '';
-      display: inline-block;
-      width: 1.4em;
-      height: 1.4em;
-      background-color: red; }
+    border: 1px solid green;
+    position: relative; }
   .contacts__method {
     display: inline-block; }
