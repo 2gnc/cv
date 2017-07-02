@@ -149,7 +149,18 @@
   list-style-type: none;
   width: 70%; }
   .contacts__item {
-    border: 1px solid green;
-    position: relative; }
+    position: relative;
+    border-bottom: 1px solid #eaeaea; }
   .contacts__method {
-    display: inline-block; }
+    display: inline-block;
+    position: relative;
+    left: -1em;
+    margin-bottom: 0;
+    color: #757575;
+    line-height: 1; }
+  .contacts__text {
+    line-height: 1; }
+  .contacts__icon {
+    font-size: 1.2em;
+    position: relative;
+    left: -2em; }

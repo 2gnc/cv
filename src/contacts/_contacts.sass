@@ -2,13 +2,18 @@
 	list-style-type: none
 	width: 70%
 	&__item
-		border: 1px solid green
-		&:before
-			content: ''
-			display: inline-block
-			width: 1.4em
-			height: 1.4em
-			background-color: red
+		position: relative
+		border-bottom: 1px solid #eaeaea
 	&__method
 		display: inline-block
+		position: relative
+		left: -1em
+		margin-bottom: 0
+		color: $fadetextcolor
+		line-height: 1
 	&__text
+			line-height: 1
+	&__icon
+		font-size: 1.2em
+		position: relative
+		left: -2em

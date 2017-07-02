@@ -24,7 +24,7 @@ html(lang='ru')
 						i.fa.fa-2x.fa-fw.fa-github(aria-hidden="true")
 						i.fa.fa-2x.fa-fw.fa-facebook(aria-hidden="true")
 						i.fa.fa-2x.fa-fw.fa-instagram(aria-hidden="true")
-				div.section__main
+				div.section__main(itemscope itemtype="http://schema.org/Organization")
 					.section__headers
 						h2.section__header Фамилия Имя
 						h3.section__subheader Крутая должность
@@ -32,17 +32,20 @@ html(lang='ru')
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
 						ul.contacts
 							li.contacts__item
-								p.contacts__method раз
-								p.contacts__text Lorem ipsum dolor
+								i.fa.fa-phone.contacts__icon(aria-hidden="true")
+								p.contacts__method Телефон
+								p.contacts__text(itemprop="telephone") +7 (915) 114-23-33
 							li.contacts__item
-								p.contacts__method два
-								p.contacts__text Lorem ipsum dolor
+								i.fa.fa-envelope.contacts__icon(aria-hidden="true")
+								p.contacts__method Email
+								p.contacts__text(itemprop="email") ksenia.v.polyakova@mail.ru
 							li.contacts__item
-								p.contacts__method три
-								p.contacts__text Lorem ipsum dolor
+								i.fa.fa-skype.contacts__icon(aria-hidden="true")
+								p.contacts__method Skype
+								p.contacts__text Futurama_
 					.section__buttons
 						button.button резюме (pdf)
-							i.fa.fa-download(aria-hidden="true")
+							i.fa.fa-download.button__icon(aria-hidden="true")
 						button.button написать
-							i.fa.fa-envelope(aria-hidden="true")
+							i.fa.fa-envelope.button__icon(aria-hidden="true")
 		script(src='js/scripts.js')
