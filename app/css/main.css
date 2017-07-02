@@ -18,6 +18,9 @@
   .container__position {
     margin: 0 auto;
     padding-top: 4em; }
+  .container__header {
+    color: #212121;
+    margin: 0; }
 
 .menu {
   width: 100%;
@@ -81,10 +84,12 @@
   justify-content: space-between; }
   .section__position {
     margin: 3em 0; }
+  .section__third {
+    width: 33%;
+    text-align: center; }
   .section__left {
     width: 22.5%;
-    border-right: 1px solid #ffc107;
-    margin-right: 2em; }
+    border-right: 1px solid #ffc107; }
   .section__social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -108,7 +113,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .section__header {
-    color: #212121;
+    color: #ff6f00;
     margin: 0; }
   .section__subheader {
     color: #ff6f00;
@@ -123,6 +128,18 @@
     height: 300px;
     -webkit-box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.6), 1px -1px 5px 0 rgba(0, 0, 0, 0.6);
     box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.6), 1px -1px 5px 0 rgba(0, 0, 0, 0.6); }
+  .section__intro {
+    text-align: center;
+    margin-bottom: 2em; }
+  .section__qual {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .section--qual {
+    display: block; }
 
 .button {
   width: 150px;

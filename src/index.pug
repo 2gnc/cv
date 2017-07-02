@@ -18,16 +18,16 @@ html(lang='ru')
 				a.menu__item(href="#fut") планы
 		div.container.container__position
 			section.section.section__position#home
-				div.section__left
+				.section__left
 					img.section__pic(src="img/section__pic--01.jpg", alt="alt")
 					div.section__social
 						i.fa.fa-2x.fa-fw.fa-github(aria-hidden="true")
 						i.fa.fa-2x.fa-fw.fa-facebook(aria-hidden="true")
 						i.fa.fa-2x.fa-fw.fa-instagram(aria-hidden="true")
-				div.section__main(itemscope itemtype="http://schema.org/Organization")
+				.section__main(itemscope itemtype="http://schema.org/Organization")
 					.section__headers
-						h2.section__header Фамилия Имя
-						h3.section__subheader Крутая должность
+						h1.container__header Фамилия Имя
+						h3.section__subheader Менеджер проектов
 					div.section__desc
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat, aliquam! In fugit id sint, nam repellendus possimus sit itaque aspernatur modi facere earum mollitia veritatis officia quo iste nisi.
 						ul.contacts
@@ -48,4 +48,13 @@ html(lang='ru')
 							i.fa.fa-download.button__icon(aria-hidden="true")
 						button.button написать
 							i.fa.fa-envelope.button__icon(aria-hidden="true")
+			section.section.section__position.section--qual#comp
+				p.section__intro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet sunt animi est qui provident eum suscipit aspernatur? Temporibus, quia, recusandae! Recusandae est, sit, autem sint delectus sapiente officiis dolor neque.
+				div.section__qual
+					.section__third
+						h2.section__header Профессиональные навыки
+					.section__third
+						h2.section__header Знание технологий
+					.section__third
+						h2.section__header Личные качества
 		script(src='js/scripts.js')
