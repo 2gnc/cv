@@ -54,22 +54,32 @@ html(lang='ru')
 					.section__third
 						h2.section__header Профессиональные навыки
 						div.skill
-							div.skill__name skill
-							div.skill__value 90%
+							div.skill__name(data-percent = '90') skill
+							div.skill__value 
+						div.skill__line
+							div.skill__line-value
+						div.skill
+							div.skill__name(data-percent = '30') skill2
+							div.skill__value 
 						div.skill__line
 							div.skill__line-value
 					.section__third
 						h2.section__header Знание технологий
 						div.skill
-							div.skill__name skill
-							div.skill__value 90%
+							div.skill__name(data-percent = '50') skill
+							div.skill__value
+						div.skill__line
+							div.skill__line-value
+						div.skill
+							div.skill__name(data-percent = '100') skill
+							div.skill__value
 						div.skill__line
 							div.skill__line-value
 					.section__third
 						h2.section__header Личные качества
 						div.skill
-							div.skill__name skill
-							div.skill__value 90%
+							div.skill__name(data-percent = '10') skill
+							div.skill__value
 						div.skill__line
 							div.skill__line-value
 			section.section.section__position.section--what#comp
