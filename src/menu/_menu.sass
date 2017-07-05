@@ -37,4 +37,15 @@
 			cursor: pointer
 		&:hover:before
 			width: 50%
-
+.menu__item--active:before
+	position: absolute
+	left: 0
+	bottom: 0
+	content: ''
+	display: block
+	width: 50%
+	height: 2px
+	background-color: $primarycolor
+	transition-property: width
+	transition-duration: 0.3s
+	transition-timing-function: ease-out
