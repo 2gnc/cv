@@ -37,7 +37,7 @@ scroller = (
 			};
 		};
 // получаем элемент меню, в котором в настоящий момент установлен menu__item--active
-	var currentlyHighlighted = document.querySelector('.menu__item--active');
+	 var currentlyHighlighted = document.querySelector('.menu__item--active');
 // снимаем класс menu__item--active если текущая секция не соответствует подсвеченному меню
 	if( currentlyHighlighted != null && '#'+idToHilight !== currentlyHighlighted.getAttribute( 'href' ) ) {
 		currentlyHighlighted.classList.remove( 'menu__item--active' );
