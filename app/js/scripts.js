@@ -10,19 +10,9 @@ var menu = document.querySelectorAll( '.menu__item' ),
 	fromtop = document.documentElement.clientHeight / 3,
 	fromleft = document.documentElement.clientWidth / 2,
 	controlPoint,
-	scroller
+	scroller,
+	clicker
 	;
-
-// алгоритм 
-// Определить координаты контрольной точки
-// При прокрутке страницы считывать тег, находящийся в контролькой точке
-// Получить всех родителей точки, выбрать из них section
-// получить ID этого section
-// Найти в меню элемент с таким же ID в href
-// Назначить этому элементу класс .menu__item--active
-// Удалить этот класс с других элементов меню
-// (при скролле проверять, в правильном ли месте находится класс .menu__item--active, 
-// если в неправильном - запускать смену класса)
 
 // отслеживанием прокрутку страницы
 scroller = (
@@ -47,14 +37,26 @@ scroller = (
 			};
 		};
 // получаем элемент меню, в котором в настоящий момент установлен menu__item--active
-			var currentlyHighlighted = document.querySelector('.menu__item--active');
+	var currentlyHighlighted = document.querySelector('.menu__item--active');
 // снимаем класс menu__item--active если текущая секция не соответствует подсвеченному меню
-			if( currentlyHighlighted != null && '#'+idToHilight !== currentlyHighlighted.getAttribute( 'href' ) ) {
-				currentlyHighlighted.classList.remove( 'menu__item--active' );
-				}
-			}
+	if( currentlyHighlighted != null && '#'+idToHilight !== currentlyHighlighted.getAttribute( 'href' ) ) {
+		currentlyHighlighted.classList.remove( 'menu__item--active' );
 		}
-	)();
+	}
+})();
+// реагируем на клик по элементу меню
+clicker = (function() {
+		for ( var i = 0; i < menu.length; i++ ) {
+			menu[i].addEventListener( 'click', function() {
+				for (var m = 0; m < menu.length; m++ ) {
+					menu[m].classList.remove( 'menu__item--active' );
+					}
+				})
+			}
+		})();
+
+// обрабатывать случаи, когда контрольная точка не находитсяни в какой секции: устанавливать блжайшую предыдущую
+// сделать плавную прокрутку
 // Установка %% скиллов в скиллбар и заголовки
 // находим блок skill
 var skill = document.getElementsByClassName('skill');
