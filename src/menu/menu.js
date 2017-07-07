@@ -1,15 +1,16 @@
 'use strict';
 // подсветка элементов меню в зависимости от просматриваемой секции
 // меню целиком
-var menu = document.querySelector( '.menu__wrapper' ),
+var menu = document.querySelectorAll( '.menu__item' ),
 // секции
 	sectionAbout = document.getElementById( 'home' ),
 	sectionComp = document.getElementById( 'comp' ),
 	sectionExp = document.getElementById( 'exp' ),
 // контрольная точка (отступ по вертикали и горизонтали)
-	fromtop = document.documentElement.clientHeight / 5,
+	fromtop = document.documentElement.clientHeight / 3,
 	fromleft = document.documentElement.clientWidth / 2,
-	controlPoint
+	controlPoint,
+	scroller
 	;
 
 // алгоритм 
@@ -23,25 +24,34 @@ var menu = document.querySelector( '.menu__wrapper' ),
 // (при скролле проверять, в правильном ли месте находится класс .menu__item--active, 
 // если в неправильном - запускать смену класса)
 
-
-
-// событие прокрутки
-// var scroller = (function() {
-// 	document.onscroll = function() {
-// 		var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-// 		console.log(scrolled + 'px');
-// 		};
-// 	})();
-
+// отслеживанием прокрутку страницы
+scroller = (
+	function() {
+		document.onscroll = function() {
 // определяем элемент который находится в координатах контрольной точки
-controlPoint = document.elementFromPoint(fromleft, fromtop);
-
+			controlPoint = document.elementFromPoint(fromleft, fromtop);
 // ищем родителя - section у элемента 
-var section = (function() {
-	while( (controlPoint = controlPoint.parentElement) && !controlPoint.classList.contains('section') );
-	return controlPoint;
-	})();
-
+			var section = (function() {
+				while( (controlPoint = controlPoint.parentElement) && !controlPoint.classList.contains('section') );
+				return controlPoint;
+				})();
 // получаем ID найденного элемента в виде строки
-var idToHilight = section.getAttribute('id');
-console.log( idToHilight );
+			if ( section ) {
+				var idToHilight = section.getAttribute('id');
+				};
+// получим элемент меню, в котором href равен найденному ID, добавим этому элементу специальный класс
+	for (var i = 0; i < menu.length; i++ ) {
+		var hrefValue = menu[i].getAttribute( 'href' );
+		if( hrefValue == '#'+idToHilight ) {
+			menu[i].classList.add( 'menu__item--active' );
+			};
+		};
+// получаем элемент меню, в котором в настоящий момент установлен menu__item--active
+			var currentlyHighlighted = document.querySelector('.menu__item--active');
+// снимаем класс menu__item--active если текущая секция не соответствует подсвеченному меню
+			if( currentlyHighlighted != null && '#'+idToHilight !== currentlyHighlighted.getAttribute( 'href' ) ) {
+				currentlyHighlighted.classList.remove( 'menu__item--active' );
+				}
+			}
+		}
+	)();
